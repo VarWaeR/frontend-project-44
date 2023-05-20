@@ -1,7 +1,5 @@
-import gameEngine from '../index.js';
+import { gameEngine, randomNumber } from '../index.js';
 
-// random number for games
-const randomNumber = (max) => Math.floor(Math.random() * max);
 // calculating correctAnswer
 const calculateResult = (randomNumber1, randomNumber2, randomOperation) => {
   let result = 0;

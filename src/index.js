@@ -1,5 +1,9 @@
 import readlineSync from 'readline-sync';
 
+// random number for games
+const randomNumber = (max) => Math.floor(Math.random() * max);
+
+// creating game engine
 const gameEngine = (calcLogic, rules) => {
 // greeting and naming
   console.log('Welcome to the Brain Games!');
@@ -19,4 +23,4 @@ const gameEngine = (calcLogic, rules) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
-export default gameEngine;
+export { gameEngine, randomNumber };
