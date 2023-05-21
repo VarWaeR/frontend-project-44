@@ -29,7 +29,7 @@ const randomOperation = () => {
 const rules = 'What is the result of the expression?';
 
 // game logic
-const calcLogic = () => {
+const logic = () => {
   const randomNumber1 = randomNumber(20);
   const randomNumber2 = randomNumber(20);
   const operation = randomOperation();
@@ -38,6 +38,6 @@ const calcLogic = () => {
   return [question, correctAnswer];
 };
 
-const calcGame = () => gameEngine(calcLogic, rules);
+const calcGame = () => gameEngine(logic, rules);
 
 export default calcGame;

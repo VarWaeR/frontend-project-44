@@ -3,7 +3,7 @@ import { gameEngine, randomNumber } from '../index.js';
 const rules = 'Find the greatest common divisor of given numbers.';
 
 // game logic
-const gcdLogic = () => {
+const logic = () => {
   const randomNumber1 = randomNumber(50);
   const randomNumber2 = randomNumber(50);
   let correctAnswer = 0;
@@ -22,6 +22,6 @@ const gcdLogic = () => {
   return [question, correctAnswer];
 };
 
-const gcdGame = () => gameEngine(gcdLogic, rules);
+const gcdGame = () => gameEngine(logic, rules);
 
 export default gcdGame;
