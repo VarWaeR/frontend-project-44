@@ -24,7 +24,7 @@ const logic = () => {
       arr.push(startItem);
     }
   }
-  // logic 3 - first step +3, then -2. Next step +3, then -2. etc.
+  // logic 3 - every step +4
   if (numLogic === 2) {
     for (let i = 0; i < 10; i += 1) {
       startItem += 4;
