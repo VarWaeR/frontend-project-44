@@ -4,7 +4,7 @@ const rules = 'What number is missing in the progression?';
 
 // game logic
 const logic = () => {
-  let missedItem = randomNumber(10);
+  const missedItem = randomNumber(10);
   let startItem = randomNumber(20);
   const arr = [];
   // creating 3 different logic
