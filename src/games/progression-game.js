@@ -26,11 +26,8 @@ const logic = () => {
   }
   // logic 3 - first step +3, then -2. Next step +3, then -2. etc.
   if (numLogic === 2) {
-    missedItem = randomNumber(5);
-    for (let i = 0; i < 5; i += 1) {
-      startItem += 3;
-      arr.push(startItem);
-      startItem -= 2;
+    for (let i = 0; i < 10; i += 1) {
+      startItem += 4;
       arr.push(startItem);
     }
   }
