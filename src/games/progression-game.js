@@ -36,7 +36,7 @@ const logic = () => {
   }
   const correctAnswer = String(arr[missedItem]);
   arr[missedItem] = '..';
-  const question = (`${arr}`);
+  const question = arr.join(' ');
   return [question, correctAnswer];
 };
 
