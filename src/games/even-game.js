@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 // evenGame
-const evenGame = () => {
+const runEvenGame = () => {
   // random number
   const randomNumber = (max) => Math.floor(Math.random() * max);
   // getting name
@@ -37,4 +37,4 @@ const evenGame = () => {
   }
   console.log(`Congratulations, ${name}!`);
 };
-export default evenGame;
+export default runEvenGame;
