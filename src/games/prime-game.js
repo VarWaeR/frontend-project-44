@@ -1,6 +1,6 @@
 import { gameEngine, randomNumber } from '../index.js';
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // game logic
 const logic = () => {
@@ -22,6 +22,6 @@ const logic = () => {
   return [question, correctAnswer];
 };
 
-const primeGame = () => gameEngine(logic, rules);
+const runPrimeGame = () => gameEngine(logic, gameRule);
 
-export default primeGame;
+export default runPrimeGame;
