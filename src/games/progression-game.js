@@ -1,6 +1,6 @@
 import { gameEngine, randomNumber } from '../index.js';
 
-const rules = 'What number is missing in the progression?';
+const gameRule = 'What number is missing in the progression?';
 
 // game logic
 const logic = () => {
@@ -37,6 +37,6 @@ const logic = () => {
   return [question, correctAnswer];
 };
 
-const progressionGame = () => gameEngine(logic, rules);
+const runProgressionGame = () => gameEngine(logic, gameRule);
 
-export default progressionGame;
+export default runProgressionGame;
