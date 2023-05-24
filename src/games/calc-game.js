@@ -38,6 +38,6 @@ const logic = () => {
   return [question, correctAnswer];
 };
 
-const calcGame = () => gameEngine(logic, rules);
+const runCalcGame = () => gameEngine(logic, rules);
 
-export default calcGame;
+export default runCalcGame;
