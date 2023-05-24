@@ -1,10 +1,13 @@
-import { gameEngine, randomNumber } from '../index.js';
+import gameEngine from '../index.js';
+import getRandomNumber from '../modules/random-number.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // game logic
-const logic = () => {
-  const randomNumber1 = randomNumber(30) + 1;
+const getRoundData = () => {
+  const start = 1;
+  const end = 30;
+  const randomNumber1 = getRandomNumber(start, end);
   let correctAnswer = '';
   const checkArr = [];
   const question = (`${randomNumber1} `);
@@ -22,6 +25,6 @@ const logic = () => {
   return [question, correctAnswer];
 };
 
-const runPrimeGame = () => gameEngine(logic, gameRule);
+const runPrimeGame = () => gameEngine(getRoundData, gameRule);
 
 export default runPrimeGame;

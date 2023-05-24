@@ -1,4 +1,5 @@
-import { gameEngine, randomNumber } from '../index.js';
+import gameEngine from '../index.js';
+import getRandomNumber from '../modules/random-number.js';
 
 // calculating correctAnswer
 const calculateResult = (randomNumber1, randomNumber2, randomOperation) => {
@@ -16,7 +17,7 @@ const randomOperation = () => {
   const plus = '+';
   const minus = '-';
   let result = '';
-  const randomingOperation = randomNumber(1);
+  const randomingOperation = getRandomNumber(1);
   if (randomingOperation === 1) {
     result = plus;
   }
@@ -26,18 +27,20 @@ const randomOperation = () => {
   return result;
 };
 
-const rules = 'What is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
 
 // game logic
-const logic = () => {
-  const randomNumber1 = randomNumber(20);
-  const randomNumber2 = randomNumber(20);
+const getRoundData = () => {
+  const start = 1;
+  const end = 20;
+  const randomNumber1 = getRandomNumber(start, end);
+  const randomNumber2 = getRandomNumber(start, end);
   const operation = randomOperation();
   const question = (`${randomNumber1} ${operation} ${randomNumber2}`);
   const correctAnswer = String(calculateResult(randomNumber1, randomNumber2, operation));
   return [question, correctAnswer];
 };
 
-const runCalcGame = () => gameEngine(logic, rules);
+const runCalcGame = () => gameEngine(getRoundData, gameRule);
 
 export default runCalcGame;

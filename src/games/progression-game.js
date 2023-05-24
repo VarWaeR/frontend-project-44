@@ -1,11 +1,15 @@
-import { gameEngine, randomNumber } from '../index.js';
+import gameEngine from '../index.js';
+import getRandomNumber from '../modules/random-number.js';
 
 const gameRule = 'What number is missing in the progression?';
 
 // game logic
-const logic = () => {
-  const missedItem = randomNumber(10);
-  let startItem = randomNumber(20);
+const getRoundData = () => {
+  const startProgression = 1;
+  const endProgression = 20;
+  const endMissedItem = 10;
+  const missedItem = getRandomNumber(startProgression, endMissedItem);
+  let startItem = getRandomNumber(startProgression, endProgression);
   const arr = [];
   // creating 3 different logic
   const arrLogic = [1, 2, 3];
@@ -37,6 +41,6 @@ const logic = () => {
   return [question, correctAnswer];
 };
 
-const runProgressionGame = () => gameEngine(logic, gameRule);
+const runProgressionGame = () => gameEngine(getRoundData, gameRule);
 
 export default runProgressionGame;
