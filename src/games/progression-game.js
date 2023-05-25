@@ -2,37 +2,44 @@ import gameEngine from '../index.js';
 import getRandomNumber from '../modules/random-number.js';
 
 const gameRule = 'What number is missing in the progression?';
+
 const getNumLogic = () => {
   const arrLogic = [1, 2, 3];
   const result = Math.floor(Math.random() * arrLogic.length);
   return result;
 };
+
 const getProgression = (numLogic, startItem) => {
   const arr = [];
   let firstItem = startItem;
-  // logic 1 - every step +2
-  if (numLogic === 0) {
-    for (let i = 0; i < 10; i += 1) {
-      firstItem += 2;
-      arr.push(firstItem);
-    }
-  }
-  // logic 2 - every step +3
-  if (numLogic === 1) {
-    for (let i = 0; i < 10; i += 1) {
-      firstItem += 3;
-      arr.push(firstItem);
-    }
-  }
-  // logic 3 - every step +4
-  if (numLogic === 2) {
-    for (let i = 0; i < 10; i += 1) {
-      firstItem += 4;
-      arr.push(firstItem);
-    }
+  switch (numLogic) {
+    // every step + 2
+    case 0:
+      for (let i = 0; i < 10; i += 1) {
+        firstItem += 2;
+        arr.push(firstItem);
+      }
+      break;
+    // every step +3
+    case 1:
+      for (let i = 0; i < 10; i += 1) {
+        firstItem += 3;
+        arr.push(firstItem);
+      }
+      break;
+    // every step +4
+    case 2:
+      for (let i = 0; i < 10; i += 1) {
+        firstItem += 4;
+        arr.push(firstItem);
+      }
+      break;
+    default:
+      console.log(`Error. numLogic = ${numLogic}`);
   }
   return arr;
 };
+
 // game logic
 const getRoundData = () => {
   const startProgression = 1;
