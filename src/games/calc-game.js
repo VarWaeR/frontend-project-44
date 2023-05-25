@@ -4,26 +4,24 @@ import getRandomNumber from '../modules/random-number.js';
 // calculating correctAnswer
 const calculateResult = (randomNumber1, randomNumber2, randomOperation) => {
   let result = 0;
-  if (randomOperation === '+') {
-    result = randomNumber1 + randomNumber2;
-  }
-  if (randomOperation === '-') {
-    result = randomNumber1 - randomNumber2;
+  switch (randomOperation) {
+    case '+':
+      result = randomNumber1 + randomNumber2;
+      break;
+    case '-':
+      result = randomNumber1 - randomNumber2;
+      break;
+    default:
+      console.log(`Error. randomOperation = ${randomOperation}`);
   }
   return result;
 };
 // random math operation
 const randomOperation = () => {
-  const plus = '+';
-  const minus = '-';
-  let result = '';
-  const randomingOperation = getRandomNumber(1);
-  if (randomingOperation === 1) {
-    result = plus;
-  }
-  if (randomingOperation === 0) {
-    result = minus;
-  }
+  const start = 0;
+  const end = 1;
+  const arrOperations = ['+', '-'];
+  const result = arrOperations[getRandomNumber(start, end)];
   return result;
 };
 
