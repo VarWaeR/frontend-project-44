@@ -7,7 +7,6 @@ const getRoundData = () => {
   const end = 20;
   const number = getRandomNumber(start, end);
   const question = (`${number}`);
-  // check answer
   let correctAnswer = '';
   if (number % 2 === 0) {
     correctAnswer = 'yes';

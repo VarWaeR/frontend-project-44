@@ -13,7 +13,6 @@ const getProgression = (step, startItem) => {
   return arr;
 };
 
-// game logic
 const getRoundData = () => {
   const start = 1;
   const startStep = 2;

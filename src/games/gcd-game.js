@@ -3,7 +3,6 @@ import getRandomNumber from '../modules/random-number.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-// game logic
 const getRoundData = () => {
   const start = 1;
   const end = 50;

@@ -14,7 +14,6 @@ const getCorrectAnswer = (arr) => {
   return correctAnswer;
 };
 
-// game logic
 const getRoundData = () => {
   const start = 1;
   const end = 30;

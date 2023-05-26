@@ -1,7 +1,6 @@
 import gameEngine from '../index.js';
 import getRandomNumber from '../modules/random-number.js';
 
-// calculating correctAnswer
 const calculateResult = (randomNumber1, randomNumber2, randomOperation) => {
   let result = 0;
   switch (randomOperation) {
@@ -16,7 +15,6 @@ const calculateResult = (randomNumber1, randomNumber2, randomOperation) => {
   }
   return result;
 };
-// random math operation
 const randomOperation = () => {
   const start = 0;
   const end = 1;
@@ -27,7 +25,6 @@ const randomOperation = () => {
 
 const gameRule = 'What is the result of the expression?';
 
-// game logic
 const getRoundData = () => {
   const start = 1;
   const end = 20;
